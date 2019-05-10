@@ -68,7 +68,21 @@ public class ConectaPruebas {
 						miResulSet.getString(4)+" "+
 						miResulSet.getInt(5));
 				 }
-				System.out.println("hola");
+				 
+				 
+			//7.Consultas Preparadas
+				 PreparedStatement sentencia= miConexion.prepareStatement
+						 ("Select * from clientes where provincia=? and numeroCompras=?");
+				 sentencia.setString(1, "zaragoza");
+				 sentencia.setInt(2,3);
+				 ResultSet rsp= sentencia.executeQuery();
+				 System.out.println("\n\n  CONSULTAS PREPARADAS"); 
+				 
+				 while(rsp.next()) {
+					 System.out.println(rsp.getString(1)+" "+rsp.getString(2)+" "+
+						rsp.getString(3)+" "+rsp.getString(4)+" "+rsp.getInt(5));
+				 }
+			
 		}catch(Exception e) {
 			System.out.println("No conecta");
 			e.printStackTrace();

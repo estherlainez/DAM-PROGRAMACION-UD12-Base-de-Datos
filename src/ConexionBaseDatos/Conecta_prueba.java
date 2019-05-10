@@ -9,7 +9,7 @@ public class Conecta_prueba {
 			//1. Crear conexion
 			//Connection miConexion= DriverManager.getConnection("jdbc:mysql://localhost:3306/clientes");
 			Connection miConexion= DriverManager.getConnection("jdbc:mysql://localhost:3306/prueba?autoReconnect=true&useSSL=false",
-					"root","12345678");
+					"root","1234");
 			//2.Crear objeto statement
 			Statement miStatement= miConexion.createStatement();
 			
